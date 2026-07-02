@@ -1,0 +1,21 @@
+{
+  "name": "prompter-windows",
+  "productName": "Prompter Pro",
+  "version": "1.0.0",
+  "description": "Windows 外接显示器提词器",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "make": "electron-forge make",
+    "package": "electron-forge package"
+  },
+  "keywords": ["提词器", "prompter", "teleprompter"],
+  "author": "牙大哥",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "electron": "^31.0.2"
+  }
+}

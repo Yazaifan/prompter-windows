@@ -1,0 +1,3 @@
+可在此目录放置软件图标：
+- icon.ico：Windows 安装包图标（推荐 256x256）
+- 放置后在 forge.config.js 中配置 setupIcon: 'assets/icon.ico'

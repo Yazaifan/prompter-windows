@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompter Pro 主控台</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Prompter Pro</h1>
+      <p class="subtitle">Windows 外接显示器提词器</p>
+    </header>
+
+    <div class="toolbar">
+      <button id="btnOpen" class="btn primary">开启提词器</button>
+      <button id="btnClose" class="btn">关闭提词器</button>
+      <button id="btnLoad" class="btn">导入文稿</button>
+      <button id="btnSave" class="btn">保存文稿</button>
+      <div class="spacer"></div>
+      <button id="btnPlay" class="btn play">▶ 播放</button>
+      <button id="btnPause" class="btn pause">⏸ 暂停</button>
+    </div>
+
+    <div class="main-grid">
+      <div class="left-panel">
+        <label>提词显示器</label>
+        <select id="displaySelect"></select>
+
+        <div class="control-group">
+          <label>字号 <span id="fontSizeVal">72</span>px</label>
+          <input type="range" id="fontSize" min="24" max="200" value="72">
+        </div>
+
+        <div class="control-group">
+          <label>行高 <span id="lineHeightVal">1.6</span></label>
+          <input type="range" id="lineHeight" min="1.0" max="3.0" step="0.1" value="1.6">
+        </div>
+
+        <div class="control-group">
+          <label>滚动速度 <span id="speedVal">3</span></label>
+          <input type="range" id="speed" min="0" max="20" step="0.5" value="3">
+        </div>
+
+        <div class="control-row">
+          <div class="color-group">
+            <label>文字颜色</label>
+            <input type="color" id="textColor" value="#ffffff">
+          </div>
+          <div class="color-group">
+            <label>背景颜色</label>
+            <input type="color" id="bgColor" value="#000000">
+          </div>
+        </div>
+
+        <div class="control-group checkbox">
+          <input type="checkbox" id="mirror">
+          <label for="mirror">水平镜像（配合反光玻璃）</label>
+        </div>
+
+        <div class="shortcuts">
+          <h3>快捷键</h3>
+          <p>空格：播放 / 暂停</p>
+          <p>↑ / ↓：加速 / 减速</p>
+          <p>Ctrl+Shift+P：全局播放/暂停</p>
+        </div>
+      </div>
+
+      <div class="right-panel">
+        <textarea id="scriptEditor" placeholder="在这里粘贴或输入文稿&#10;也可以直接把 .txt / .md 文件拖进来"></textarea>
+      </div>
+    </div>
+
+    <div id="statusBar" class="status-bar">就绪</div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
