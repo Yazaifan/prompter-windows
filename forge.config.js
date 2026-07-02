@@ -2,7 +2,7 @@ module.exports = {
   packagerConfig: {
     asar: true,
     executableName: 'PrompterPro',
-    appCopyright: 'Yazaifan',
+    appCopyright: '牙大哥',
   },
   rebuildConfig: {},
   makers: [
@@ -11,7 +11,7 @@ module.exports = {
       config: {
         name: 'PrompterPro',
         setupExe: 'PrompterPro-Setup.exe',
-        noMsi: true,
+        noMsi: false,
       },
     },
     {
